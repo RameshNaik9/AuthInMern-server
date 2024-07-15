@@ -29,6 +29,12 @@ app.use(cors());
 //   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
 
+const corsOptions = {
+  origin: 'https://authinmern-client.azurewebsites.net',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+
 // API routes
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);

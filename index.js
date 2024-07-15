@@ -14,13 +14,13 @@ connection();
 app.use(express.json());
 app.use(cors());
 
-const buildPath = path.join(__dirname, '../client/build')
+// const buildPath = path.join(__dirname, '../client/build')
 
-app.use(express.static(buildPath))
+// app.use(express.static(buildPath))
 
-app.get('/*', (req, res) => {
-  res.sendFile('index.html', { root : buildPath });
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile('index.html', { root : buildPath });
+// });
 
 // Serve static files from the React app
 // app.use(express.static(path.join(__dirname, 'public')));
